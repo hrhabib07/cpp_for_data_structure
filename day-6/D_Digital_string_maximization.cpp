@@ -2,37 +2,32 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-string fun(string gStr){
-    int sz = gStr.size();
-    int myArr[sz];
-    myArr[sz]=0;
-    for (int i = 0; i < sz; i++)
-    {
-        myArr[i] = gStr[i]-'0';
-    };
-    for (int i = sz; i > 0; i--)
-    {
-        for (int j = 0; j < sz; j++)
-        {
-            if(myArr[j]+1<myArr[j+1]){
-                int val = myArr[j+1];
-                if(val>1){
-                    val--;
-                } 
-                char temp = val;
-                myArr[j+1] = myArr[j];
-                myArr[j] = temp;
-                if(j=0){
-                    i++;
-                }
-            }
-        } 
+string maximizeNumber(string s) {
+    int n = s.size();
+    vector<int> arr(n);
+    
+    for (int i = 0; i < n; i++) {
+        arr[i] = s[i] - '0';
     }
-    for (int i = 0; i < sz; i++)
-    {
-        gStr[i] = myArr[i]+'0';
-    }    
-    return gStr;
+    
+    bool changed = true;
+
+    while (changed) {
+        changed = false;
+        for (int i = 0; i < n - 1; i++) {
+            if (arr[i + 1] >= arr[i] + 2) {
+                arr[i + 1]--;   
+                swap(arr[i], arr[i + 1]);
+                changed = true;
+            }
+        }
+    }
+    
+    string result = "";
+    for (int i = 0; i < n; i++) {
+        result += (arr[i] + '0');
+    }
+    return result;
 }
 
 
@@ -44,9 +39,9 @@ int main(){
     {
         cin>>s[i];
     }
-    for (int i = 0; i < n; i++)
-    {
-        s[i] = fun(s[i]);
+    
+    for (int i = 0; i < n; i++) {
+        s[i] = maximizeNumber(s[i]);
     }
     for (int i = 0; i < n; i++)
     {

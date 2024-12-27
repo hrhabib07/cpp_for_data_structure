@@ -1,4 +1,1 @@
-
-    // cin>>s;
-    // string out = fun(s);
-    // cout<<out;
+long long num = stoll(str);
