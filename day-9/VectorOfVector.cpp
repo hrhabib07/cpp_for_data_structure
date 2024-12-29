@@ -17,15 +17,18 @@ int main(){
     vector<vector<int>> v;
     for (int i = 0; i < N; i++)
     {
-        v.push_back(vector<int>());
         int n;
         cin>>n;
+        vector <int> temp;
+        // v.push_back(vector<int>());
         for(int j = 0; j < n; j++)
         {
             int x;
             cin>>x;
-            v[i].push_back(x);
+            temp.push_back(x);
+            // v[i].push_back(x);
         }
+        v.push_back(temp);
     }
     for (int i = 0; i < N; i++)
     {
