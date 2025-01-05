@@ -22,14 +22,22 @@ int main(){
         for (int k = 0; k < comb; k++)
         {
             string converted = s;
-            if(stoi(converted)%9==0){
+            int numb = 0;
+            for (char c : converted) {
+                numb = numb * 10 + (c - '0');
+            }
+            if((numb)%9==0){
                 result="YES";
                 break;
             }
-            int number = converted[k]-'0';
+            int ind = pos[k];
+            int number = converted[ind]-'0';
             number = number*number;
-            converted[k] = number+'0';
-            int check = stoi(converted);
+            converted[ind] = number+'0';
+            int check=0;
+            for (char c : converted) {
+                check = check * 10 + (c - '0'); 
+            }
             if(check%9==0){
                 result="YES";
                 break;
