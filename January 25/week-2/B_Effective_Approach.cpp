@@ -20,21 +20,15 @@ int main(){
     for (int i = 0; i < m; i++)
     {
         int target = b[i];
+        int countA=0;
         for (int j = 0; j < n; j++)
         {
+            countA++;
             if(a[j]==target){
-                va+=j+1;
+                va+=countA;
+                pa+=n-countA+1;
             }
         }
-        int count = 0;
-        for (int j = n-1; j >=0; j--)
-        {
-            count++;
-            if(a[j]==target){
-                pa+=count;
-            }
-        }
-        
     }
     cout<<va<<" "<<pa;
     return 0;
