@@ -12,19 +12,14 @@ int main(){
     };
     int sum = 0;
     int ind = 0;
-    for (int i = 0; sum<n; i++)
+    while (sum<n)
     {
-        
-        if(i==7){
-            i=0;
-            ind=i;1
-        }
-        if(v[i]>0){
-            sum+=v[i];
-            ind++;
+        if(ind==7){
+            ind=0;
         };
-        // cout<<"Ind : "<<ind<<"; Sum : "<<sum<<endl;
-    };
+        sum+=v[ind];
+        ind++;
+    }
     cout<<ind;
     
     return 0;
