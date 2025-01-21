@@ -29,8 +29,17 @@ int main(){
                 if(counter2<n){
                     inp.push_back(firstItem);
                     inp.erase(inp.begin());
-                    } else{
-                    inp.erase(inp.begin());
+                    } else {
+                        sum+=firstItem;
+                        if(sum%2==0){
+                            points++;
+                            int newItem=sum/2;
+                            while(newItem%2==0){
+                            newItem=newItem/2;
+                    };
+                    sum=newItem;
+                        }
+                        inp.erase(inp.begin());
                     }
             } else{
                 if(firstItem%2==0 && sum==0){
