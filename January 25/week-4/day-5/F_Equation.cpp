@@ -1,22 +1,23 @@
 #include<bits/stdc++.h>
 using namespace std;
-int sqSeq(int x,int n){
-    int prev=0;
-    if(n<1) return prev;
-    
-    prev+=pow(x,n);
-    prev+=sqSeq(x,n-2);
-    
-    return prev;
+long long int power(int x,int n){
+    long long int res = 1;
+    for (int i = 1; i <=n; i++)
+    {
+        res*=x;
+    }
+    return res;
 }
 int main(){
     int x,n;
     cin>>x>>n;
-    int res;
-    if(n%2!=0){
-        n--;
+    long long int sum = 0;
+    for (int i = 0; i <= n; i+=2)
+    {
+        sum+=power(x,i);
     }
-    res= sqSeq(x,n);
-    cout<<res;
+    sum-=1;
+    cout<<sum<<endl;
+    
     return 0;
 }
