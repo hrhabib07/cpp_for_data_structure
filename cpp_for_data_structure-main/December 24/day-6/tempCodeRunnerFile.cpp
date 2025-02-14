@@ -1,0 +1,1 @@
+long long num = stoll(str);
