@@ -10,21 +10,22 @@ int main()
         int sum = 0;
         int n;
         cin >> n;
-        if (n > 3)
+        if (n >= 3)
         {
-            sum = 3;
-            while (n > 3)
-            {
-                n = n - n % 5;
-                if (n % 3 == 0 && n % 5)
-                {
-                    sum++;
-                };
-                n -= 5;
-            }
+            if (n >= 3 && n < 15)
+                sum = 3;
+            if (n % 15 == 0)
+                sum = (((n / 15)) * 3) + 1;
+            else if (n % 15 == 1)
+                sum = (((n / 15)) * 3) + 2;
+            else if (n % 15 == 1)
+                sum = (((n / 15)) * 3) + 3;
+            else
+                sum = ((n / 15) + 1) * 3;
         }
         else
         {
+
             if (n == 2)
                 sum = 3;
             else if (n == 1)
