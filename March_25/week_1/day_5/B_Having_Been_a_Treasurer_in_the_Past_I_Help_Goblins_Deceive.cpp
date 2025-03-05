@@ -27,12 +27,7 @@ int main()
                 else if (ch == 95)
                     b++;
             }
-            if (b >= a)
-            {
-                b = a - 1;
-            }
-            int sum = (b * (b + 1)) / 2;
-            cout << sum * (a - 1) << "\n";
+            cout << (1LL * a * a / 4) * b << "\n";
         }
     }
 
