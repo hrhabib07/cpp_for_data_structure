@@ -11,16 +11,7 @@ int main()
         cin >> n >> k >> x;
         long long int sum = (n * (n + 1)) / 2;
         cout << sum << endl;
-        // if (k < x && sum >= x)
-        // {
-
-        //     cout << "YES\n";
-        // }
-        // else
-        // {
-        //     cout << "NO\n";
-        // }
-    }
+        }
 
     return 0;
 }
