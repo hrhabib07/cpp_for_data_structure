@@ -18,5 +18,5 @@ int main()
         if (n = 1)
             a[0] = 0;
     }
-    printf("%d", a[n - 1]);
+    printf("%lld", a[n - 1]);
 }
