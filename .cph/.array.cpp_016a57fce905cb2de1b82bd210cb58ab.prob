@@ -1,0 +1,1 @@
+{"name":"Local: array","url":"e:\\compititive_programming\\cpp_for_data_structure\\array.cpp","tests":[{"id":1744952493285,"input":"3\n1 2 1","output":"2"},{"id":1744952546323,"input":"7\n1 2 3 4 5 6 5","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\compititive_programming\\cpp_for_data_structure\\array.cpp","group":"local","local":true}
