@@ -67,7 +67,8 @@
     "mutex": "cpp",
     "scoped_allocator": "cpp",
     "thread": "cpp",
-    "typeindex": "cpp"
+    "typeindex": "cpp",
+    "stdio.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }
