@@ -38,7 +38,7 @@ int mod_pow(int a, int b) {
 int mod_inv(int a) { return mod_pow(a, MOD - 2); }
 
 // 🧠 Bit Tricks
-#define setbits(x) __builtin_popcountll(x)
+#define setbits(x) __builtin_popconll(x)
 #define tz(x) __builtin_ctzll(x)
 #define lz(x) __builtin_clzll(x)
 #define parity(x) __builtin_parityll(x)
@@ -87,16 +87,52 @@ struct Timer {
     }
 };
 
+
+const int mx=2e4+123;
+vi adj[mx];
+bool vis[mx];
+int con=0,cl1=0;
+
+void dfs(int u, int col){
+    vis[u]=1;
+    con++;
+    if(col) cl1++;
+    int temp =!col;
+    for(auto v: adj[u]){
+        if(!vis[v]) dfs(v,temp);
+    };
+}
+
+
+
 // ✅ Main Function
 int32_t main() {
     fastIO();
-    Timer timer; // remove during contests if not needed
+    Timer timer; // remove during conests if not needed
 
     int t = 1;
-    // cin >> t;
+    cin >> t;
+    int cs =t;
     while (t--) {
+        int n; cin>>n;
+        for (int i = 1; i <=n; i++)
+        {
+            int u,v; cin>>u>>v;
+            adj[u].pb(v);
+            adj[v].pb(u);
+        }
+        int cn=0;
+        for (int i = 1; i <=20000; i++)
+        {
+            if(cn==n || con==n) break;
+            if(adj[i].size()){
+                dfs(i,1);
+                cn++;
+            }
+        }
+        cout<<"Case "<<(cs-t)<<": "<<max((con-cl1),cl1)<<endl;
+        con=0; cl1=0;
         
-        cout<<"hello"<<endl;
     }
 
     return 0;

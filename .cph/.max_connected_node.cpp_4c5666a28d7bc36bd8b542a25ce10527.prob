@@ -1,0 +1,1 @@
+{"name":"Local: max_connected_node","url":"d:\\academic\\cpp_for_data_structure\\max_connected_node.cpp","tests":[{"id":1748569752504,"input":"10 5\n1 1\n2 3\n3 4\n5 5\n7 9","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\academic\\cpp_for_data_structure\\max_connected_node.cpp","group":"local","local":true}
