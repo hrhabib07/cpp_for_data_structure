@@ -14,48 +14,61 @@ public:
     }
 };
 
-void insertion_at_any(Node *&head, Node *&tail, int pos, int val)
+void insertion_at_head(Node *&head, Node *&tail, int val)
 {
     Node *newNode = new Node(val);
-    if (pos == 0)
-    {
-        newNode->next = head;
-        head = newNode;
+    newNode->next = head;
+    head = newNode;
+    if (tail == NULL)
         tail = head;
-    }
-    else if (pos == 1)
-    {
-        if (head == NULL)
-        {
-            head = newNode;
-            tail = head;
-        }
-        else
-        {
+}
 
-            tail->next = newNode;
-            tail = newNode;
-        }
+void insertion_at_tail(Node *&head, Node *&tail, int val)
+{
+    Node *newNode = new Node(val);
+    if (tail == NULL)
+    {
+        head = newNode;
+        tail = newNode;
     }
     else
     {
-        int ind = 0;
+        tail->next = newNode;
+        tail = newNode;
+    }
+}
+
+void delete_from_any(Node *&head, Node *&tail, int pos)
+{
+    if (head == NULL)
+        return;
+
+    if (pos == 0)
+    {
+        Node *deleteNode = head;
+        head = head->next;
+        if (head == NULL)
+            tail = NULL;
+        delete deleteNode;
+    }
+    else
+    {
         Node *temp = head;
-        while (ind < val - 1)
+        int ind = 0;
+        while (ind < pos - 1 && temp->next != NULL)
         {
+            temp = temp->next;
             ind++;
-            if (temp->next != NULL)
-                temp = temp->next;
-            else
-            {
-                return;
-            }
         }
-        Node *deleteNonde = temp->next;
+
+        if (temp->next == NULL)
+            return;
+
+        Node *deleteNode = temp->next;
         temp->next = temp->next->next;
-        delete deleteNonde;
-        // newNode->next = temp->next;
-        // temp->next = newNode;
+        if (temp->next == NULL)
+            tail = temp;
+        delete deleteNode;
     }
 }
 
@@ -71,13 +84,25 @@ void print_linked_list(Node *temp)
 int main()
 {
     Node *head = NULL, *tail = NULL;
-    int t;
-    cin >> t;
-    while (t--)
+    int n;
+    cin >> n;
+    while (n--)
     {
         int x, v;
         cin >> x >> v;
-        insertion_at_any(head, tail, x, v);
+        if (x == 0)
+        {
+            insertion_at_head(head, tail, v);
+        }
+        else if (x == 1)
+        {
+            insertion_at_tail(head, tail, v);
+        }
+        else if (x == 2)
+        {
+            delete_from_any(head, tail, v);
+        }
+
         print_linked_list(head);
         cout << endl;
     }
