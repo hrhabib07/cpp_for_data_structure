@@ -89,13 +89,29 @@ void insert_at_any(Node *&hd)
     }
 }
 
-void display(Node *dis)
+void display(Node *temp)
 {
-    while (dis != NULL)
+    while (temp != NULL)
     {
-        cout << dis->val << " ";
-        dis = dis->next;
+        cout << temp->val << " ";
+        temp = temp->next;
     }
+}
+
+void display_rec(Node *temp)
+{
+    if (temp == NULL)
+        return;
+    cout << temp->val << " ";
+    display_rec(temp->next);
+}
+
+void display_rec_rev(Node *temp)
+{
+    if (temp == NULL)
+        return;
+    display_rec_rev(temp->next);
+    cout << temp->val << " ";
 }
 
 int main()
@@ -129,7 +145,10 @@ int main()
 
         // Slection Menue :
         cout << "Current Linked list : ";
-        display(head);
+        display_rec(head);
+        cout << endl;
+        cout << "Current Linked rev : ";
+        display_rec_rev(head);
         cout << endl;
         cout << "Press 1: Insertion at head";
         cout << endl;

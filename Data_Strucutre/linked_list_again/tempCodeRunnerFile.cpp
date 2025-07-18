@@ -1,1 +1,1 @@
-value
+display_rec_rev(head);
