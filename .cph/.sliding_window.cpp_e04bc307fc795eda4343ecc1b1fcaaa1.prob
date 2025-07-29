@@ -1,0 +1,1 @@
+{"name":"Local: sliding_window","url":"d:\\academic\\cpp_for_data_structure\\sliding_window.cpp","tests":[{"id":1753717297225,"input":"5 2\n1 2 3 4 5","output":"9"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\academic\\cpp_for_data_structure\\sliding_window.cpp","group":"local","local":true}
