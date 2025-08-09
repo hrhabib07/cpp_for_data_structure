@@ -1,29 +1,19 @@
-class MinStack {
-public:
-    vector<int>v; 
-    stack<int>st;
-    MinStack() {
-        
-    }
-    
-    void push(int val) {
-        if(!v.size()) v.push_back(val);
-        else if(val<=v.back()) v.push_back(val);
-        st.push(val);
-    }
-    
-    void pop() {
-        int t = st.top();
-        if(t == v.back()) v.pop_back();
-        st.pop();
-    }
-    
-    int top() {
-        return st.top();
-    }
-    
-    int getMin() {
-        return v.back();
-    }
-};
+#include <bits/stdc++.h>
+using namespace std;
+#define all(x) x.begin(), x.end()
 
+int main() {
+    // map<int, string>m;
+    // m[2]="bdc";
+    // m[5]="hei"; 
+    // m[3]="hello";
+    // for(auto it:m){
+    //     cout<<it.first<<" "<<it.second<<endl;
+    // } 
+    vector<int>a={1,2,3,4,5};
+    auto it = lower_bound(all(a), 3);   // First position >= 3
+    auto it2 = upper_bound(all(a), 3);  // First position > 3
+    cout<<*it<<endl<<*it2;
+
+    return 0;
+}
