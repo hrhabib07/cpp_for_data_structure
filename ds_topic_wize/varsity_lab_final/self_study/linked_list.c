@@ -1,52 +1,39 @@
 #include<stdio.h>
 #include<stdlib.h>
-
-struct Node
+struct  Node
 {
-    int data; 
+    int data;
     struct Node* next;
 };
 
-struct Node *head, * tail, *newnode;
-void insertion_head(){
-    newnode = (struct Node*)malloc(sizeof(struct Node));
-    printf("Enter your data : ");
-    scanf("%d",&newnode->data);
-    newnode->next = NULL;
-    if(head==NULL){
-        head = newnode; tail = newnode;
-    }else{
-        newnode->next = head;
-        head = newnode;
-    }
-}
-
-void print_ll(){
-    newnode = head;
-    while (newnode!=NULL)
-    {
-        printf("%d ", newnode->data);
-        printf("%d ", newnode->data);
-        // cout<<newnode->data<<" ";
-        newnode = newnode->next;
-    }
+void pirnt_ll_rec(struct Node* temp){
+    if(temp==NULL)return;
+    else pirnt_ll_rec(temp->next);
+    printf("%d ",temp->data);
 }
 
 int main(){
-    head = NULL; 
+    struct Node *head, *tail,*newnode;
+    head = NULL;
     tail = NULL;
-    newnode = NULL;
-    int choice=1;
-    while (choice)
+    newnode =NULL;
+
+    int n; scanf("%d",&n);
+    while (n--)
     {
-        printf("Selct your option: \n");
-        printf("1. insertion at head:\n");
-        printf("Enter your choice: \n");
-        scanf("%d",&choice);
-        insertion_head();
-        print_ll();
+        newnode = (struct Node*)malloc(sizeof(struct Node));
+        scanf("%d",&newnode->data);
+        newnode->next = NULL;
+        if(head == NULL){
+            head = newnode;
+            tail = newnode;
+        }    else{
+            tail->next = newnode;
+            tail = newnode;
+        }
     }
-     
+    newnode = head;
+    pirnt_ll_rec(newnode);
 
     return 0;
 }
