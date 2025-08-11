@@ -7,22 +7,25 @@ int main() {
     {
         int n; cin>>n;
         int k; cin>>k;
-        int no =0,ne=0;
+        vector<int>v1,v2;
         for (int i = 0; i < n; i++)
         {
             int x; cin>>x; 
-            if(x%2) no++;
-            else ne++;
+            v1.push_back(min((x%k), (k - (x%k)) % k));
         }
-        int no2 =0,ne2=0;
         for (int i = 0; i < n; i++)
         {
             int x; cin>>x; 
-            if(x%2) no2++;
-            else ne2++;
+            v2.push_back(min((x%k), (k - (x%k)) % k));
         }
-        if(no==no2 && ne2==ne) cout<<"YES"<<endl;
-        else if(k%2==1 && no==ne2) cout<<"YES"<<endl;
+
+        // for(auto i:v1) cout<<i<<" ";
+        // cout<<endl;
+        // for(auto i:v2) cout<<i<<" ";
+        // cout<<endl;
+        sort(v1.begin(),v1.end());
+        sort(v2.begin(),v2.end());
+        if(v1==v2) cout<<"YES"<<endl;
         else cout<<"NO"<<endl; 
     }
     
