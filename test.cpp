@@ -1,19 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define all(x) x.begin(), x.end()
 
 int main() {
-    // map<int, string>m;
-    // m[2]="bdc";
-    // m[5]="hei"; 
-    // m[3]="hello";
-    // for(auto it:m){
-    //     cout<<it.first<<" "<<it.second<<endl;
-    // } 
-    vector<int>a={1,2,3,4,5};
-    auto it = lower_bound(all(a), 3);   // First position >= 3
-    auto it2 = upper_bound(all(a), 3);  // First position > 3
-    cout<<*it<<endl<<*it2;
-
+    string s; 
+    getline(cin,s);
+    stringstream ss(s);
+    string word;
+    map<string,int>mp;
+    while (ss>>word)
+    {
+        if(mp.count(word)) mp[word]+=1;
+        else mp[word]=1;
+    }
+    for (auto it = mp.begin(); it != mp.end(); it++)
+    {
+        cout<<it->first<<": "<<it->second<<endl;
+    }
+    
     return 0;
 }
