@@ -42,12 +42,15 @@ int main() {
     memset(parent,-1,sizeof(parent));
     bfs(src);
     cout<<level[dest]<<endl;
+    vector<int>path;
     int node = dest;
     while (node!=-1)
     {
-        cout<<node<<" ";
+        path.push_back(node);
         node = parent[node];
     }
-    
+    reverse(path.begin(),path.end());
+    for(auto x: path) cout<<x<<" ";
+
     return 0;
 }
