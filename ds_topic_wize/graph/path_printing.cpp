@@ -24,8 +24,6 @@ void bfs(int src){
             }
         }
     }
-    
-
 }
 
 int main() {
