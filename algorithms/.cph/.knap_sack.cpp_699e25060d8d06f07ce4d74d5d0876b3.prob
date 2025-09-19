@@ -1,0 +1,1 @@
+{"name":"Local: knap_sack","url":"d:\\academic\\cpp_for_data_structure\\algorithms\\knap_sack.cpp","tests":[{"id":1758157436565,"input":"4 8\n10 4 7 5\n4 3 2 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\academic\\cpp_for_data_structure\\algorithms\\knap_sack.cpp","group":"local","local":true}
