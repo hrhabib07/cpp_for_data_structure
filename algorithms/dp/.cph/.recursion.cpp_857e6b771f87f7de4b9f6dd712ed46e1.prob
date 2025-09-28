@@ -1,0 +1,1 @@
+{"name":"Local: recursion","url":"d:\\academic\\cpp_for_data_structure\\algorithms\\dp\\recursion.cpp","tests":[{"id":1758429708506,"input":"7\n5 4 3 2 19 31 8","output":"8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\academic\\cpp_for_data_structure\\algorithms\\dp\\recursion.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: subset_sum","url":"d:\\academic\\cpp_for_data_structure\\algorithms\\knapsack\\subset_sum.cpp","tests":[{"id":1759037720294,"input":"4\n1 2 4 6\n7","output":"YES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\academic\\cpp_for_data_structure\\algorithms\\knapsack\\subset_sum.cpp","group":"local","local":true}
