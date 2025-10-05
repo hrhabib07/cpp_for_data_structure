@@ -1,0 +1,1 @@
+{"name":"Local: LCS","url":"d:\\academic\\cpp_for_data_structure\\algorithms\\LCS.cpp","tests":[{"id":1759380060076,"input":"PQRSTPQRS\nPRATPBRQRPS","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\academic\\cpp_for_data_structure\\algorithms\\LCS.cpp","group":"local","local":true}
