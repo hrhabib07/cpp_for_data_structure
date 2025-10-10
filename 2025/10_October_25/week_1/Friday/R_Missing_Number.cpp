@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+    long long res = 1LL * n * (n + 1) / 2;
+    for (int i = 1; i < n; i++)
+    {
+        int x;
+        cin >> x;
+        res = res - x;
+    }
+    cout << res << endl;
+    return 0;
+}
