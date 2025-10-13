@@ -1,0 +1,1 @@
+{"name":"Local: quick_sort","url":"d:\\academic\\cpp_for_data_structure\\algorithms\\quick_sort\\quick_sort.cpp","tests":[{"id":1760258443230,"input":"5\n2 3 1 5 0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\academic\\cpp_for_data_structure\\algorithms\\quick_sort\\quick_sort.cpp","group":"local","local":true}
