@@ -1,20 +1,19 @@
-void print_num(int n)
-{
-    if (n == 6)
-    {
-        cout << endl;
-        return;
-    }
-    cout << n << " ";
-    print_num(n + 1);
-    cout << n << " ";
-}
-print_num(1);
 #include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
-    print_num(1);
-    return 0;
+    int n, x, s, i;
+    for (cin >> n; cin >> n >> x;)
+    {
+        int w[n];
+        for (i = 0; i < n; cin >> w[i++])
+
+            for (s = i = 0; s < x && i < n; s += w[i++])
+
+                if (s == x && i == n)
+                    puts("NO");
+                else
+                    for (swap(w[i - (s == x)], w[i]), puts("YES"), i = 0; i < n; i++)
+                        cout << w[i] << ' ';
+    }
 }
