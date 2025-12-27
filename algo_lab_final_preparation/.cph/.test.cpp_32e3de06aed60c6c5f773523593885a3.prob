@@ -1,0 +1,1 @@
+{"name":"Local: test","url":"d:\\academic\\cpp_for_data_structure\\algo_lab_final_preparation\\test.cpp","tests":[{"id":1764508575878,"input":"4 8\n1 2 3 5","output":"13"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\academic\\cpp_for_data_structure\\algo_lab_final_preparation\\test.cpp","group":"local","local":true}
